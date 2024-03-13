@@ -110,16 +110,9 @@ def perform_regex(text_content):
         print(f"Error performing regex: {e}") 
         
 while True:
-    try:
-        # Validate directory path input
-        directory_path = input('Enter Directory Folder Name Here: ')
-        if not os.path.isdir(directory_path):
-            print("Invalid directory path. Please enter a valid absolute directory path.")
-            continue
-        break
-    except Exception as e:
-        print(f"Error accessing directory: {e}")
-
+    # Validate directory path input
+    directory_path = input('Enter Directory Folder Name Here: ')
+    
     # Retrieve the name of PDF files located within the specified directory
     directory_files = [filename for filename in os.listdir(directory_path) if filename.endswith('.pdf')]
     if not directory_files:
