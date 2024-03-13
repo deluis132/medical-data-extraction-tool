@@ -112,8 +112,7 @@ def perform_regex(text_content):
 while True:
     try:
         # Validate directory path input
-        username = input('Enter the Columbia ID associated with your System.')
-        directory_path = f'C:\\Users\\{username}\\Desktop\\patient_files'
+        directory_path = input('Enter Directory Folder Name Here: ')
         if not os.path.isdir(directory_path):
             print("Invalid directory path. Please enter a valid absolute directory path.")
             continue
